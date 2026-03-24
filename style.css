@@ -1,0 +1,102 @@
+/* === Reset & Base Styles === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%; /* ensures the grid can fill the viewport */
+  font-family: sans-serif;
+  margin: 1rem;
+}
+
+/* === Layout === */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* header - main - footer */
+  min-height: 100vh; /* full viewport height */
+  background: linear-gradient(to top left, #ff8686, #fd86ff);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2rem;
+  height: 10rem;
+}
+
+h1 {
+  font-size: 5rem;
+  color: rgb(255, 0, 195);
+}
+
+img {
+  height: 10rem;
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.calculator,
+.words {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+p {
+  font-size: 2rem;
+  color: rgb(9, 36, 72);
+}
+
+input {
+  height: 2rem;
+  font-size: 1.5rem;
+  width: 60%;
+  background-color: aliceblue;
+  text-align: center;
+  border: 2px solid rgb(209, 243, 255);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+}
+
+button {
+  height: 6rem;
+  width: 6rem;
+  font-size: 1.5rem;
+  border: 0.2rem solid silver;
+  border-radius: 100%;
+  background: linear-gradient(to top left, #ffffff, #86efff);
+}
+
+button:hover {
+  cursor: pointer;
+  background: linear-gradient(to top left, #e5feff, #66e9fd);
+}
+
+button:active {
+  height: 5.5rem;
+  width: 5.5rem;
+}
+
+/* Remove the up and down arrows in the input field of type "number"
+/* Chrome, Safari, Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
