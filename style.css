@@ -100,3 +100,91 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+/* === Mobile Landscape === */
+@media (orientation: landscape) and (max-height: 500px) {
+  header {
+    flex-direction: row;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+
+  .title-animal {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.25rem;
+  }
+
+  img {
+    height: 4rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  main {
+    flex-direction: row;
+    margin-top: 0.5rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  button {
+    height: 4rem;
+    width: 4rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* === Mobile Portrait === */
+@media (max-width: 600px) {
+  html,
+  body {
+    margin: 0.5rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .title-animal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+
+  img {
+    height: 5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .calculator,
+  .words {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  input {
+    width: 80%;
+  }
+}
